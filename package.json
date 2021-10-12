@@ -1,0 +1,45 @@
+{
+  "name": "mvp",
+  "version": "1.0.0",
+  "description": "Made a mvp product in 2 days",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "react-dev": "webpack --config ./webpack.config.js --mode development -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Faithans/MVP.git"
+  },
+  "author": "Lunghao Lee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Faithans/MVP/issues"
+  },
+  "homepage": "https://github.com/Faithans/MVP#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.1.0",
+    "@babel/core": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.2",
+    "css-loader": "^1.0.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-import": "^2.25.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.26.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "style-loader": "^0.23.0",
+    "webpack": "^4.46.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.1.8"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.13",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
