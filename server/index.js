@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('path');
+const {router} = require('./router');
 
 const port = 3000;
 const app = express();
@@ -12,10 +13,12 @@ app.use((req, res, next) => {
 });
 
 app.use(express.static(path.join(__dirname, '..', 'client', 'dist')));
+app.use('/', router);
 
 app.get('*', function (req, res) {
   res.sendFile(path.join(__dirname, '..', 'client', 'dist', 'index.html'));
 });
+
 
 app.listen(port, () => {
   console.log('Listening on http://localhost:' + port + '/');
