@@ -1,7 +1,8 @@
 const path = require('path');
+const webpack = require("webpack");
 
 module.exports = {
-  entry: './client/src/index.tsx',
+  entry: './client/src/index.js',
   output: {
     filename: 'bundle.js',
     path: path.join(__dirname, 'client', 'dist')
@@ -23,11 +24,11 @@ module.exports = {
             presets: [
               '@babel/preset-env',
               '@babel/preset-react',
-              '@babel/preset-typescript'
             ]
           }
         }
       }
     ]
+
   }
 };
