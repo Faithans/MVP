@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import CodeType from './CodeType.js';
-import {answerCode} from './answer.js';
 
 const App = () => {
   const [stepIdx, setStepIdx] = useState(0);
 
   const stepPromt = [
-    'We will need a Node class first',
-    'Well done! Now we will need a BinarySearchTree class',
+    'Please create a Binary Tree Search with Insert, Contain and Depth First Log function',
+    'Please create a Graph',
     `Let's started created the helper function, insert(data) & insertNode(node, newNode)`,
     `It's time for the remove function! create remove(data) & removeNode(node, newNode)`,
     'Well done! Try another data structure!'
@@ -24,12 +23,11 @@ const App = () => {
   return (
     <div className="App">
       <div className='card'>
-        <h1> Please create a binary tree in ES6 </h1>
-        <div>
+        <h1> Your Last Miniute Data Structure Reviewer!</h1>
+        <div className='prompt'>
           {stepPromt[stepIdx]}
         </div>
         <CodeType
-        answer={answerCode.answer}
         stepIdx={stepIdx}
         setStepIdx={setStepIdx}
         />
