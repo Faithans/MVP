@@ -1,0 +1,1 @@
+"var BinarySearchTree = function(value) {\n  var node = {};\n  node.value = value;\n  node.left = null;\n  node.right = null;\n  node.insert = binarySearchTreeMethods.insert;\n  node.contains = binarySearchTreeMethods.contains;\n  node.depthFirstLog = binarySearchTreeMethods.depthFirstLog;\n  return node;\n};"

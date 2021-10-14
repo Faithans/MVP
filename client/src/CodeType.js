@@ -22,6 +22,15 @@ export default function CodeType({answer, setStepIdx, stepIdx}) {
     }
   }
 
+  const downloadTxtFile = () => {
+    const element = document.createElement("a");
+    const file = new Blob([document.getElementById('typeArea').value], {type: 'text/plain'});
+    element.href = URL.createObjectURL(file);
+    element.download = "userCode.js";
+    document.body.appendChild(element); // Required for this to work in FireFox
+    element.click();
+  }
+
   const handleChange = (e) => {
     console.log(e.target.value);
     setCurrentCode(e.target.value);
@@ -32,7 +41,12 @@ export default function CodeType({answer, setStepIdx, stepIdx}) {
           className='typeArea'
           value={currentCode}
           onChange={handleChange}
+          id='typeArea'
         />
+        <input type="button" value="Submit Code" className="submitButton"
+        onClick={downloadTxtFile}
+        ></input>
+
         <input type="button" value="Submit Code" className="submitButton"
         onClick={codeCompare}
         ></input>

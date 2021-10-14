@@ -14,7 +14,7 @@ const compareText = (userCode, answerCode) => {
       },
       headers: {
         'x-rapidapi-host': 'twinword-text-similarity-v1.p.rapidapi.com',
-        'x-rapidapi-key': '341e3c2de0msh21af986d12f11edp19e778jsn064062bcd0ad'
+
       }
     };
 
