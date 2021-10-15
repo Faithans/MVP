@@ -8,7 +8,7 @@ export default function CodeType({answer, setStepIdx, stepIdx}) {
 
   const postCode = (e) => {
     e.preventDefault();
-    axios.post('/ds/submit', {currentCode})
+    axios.post('/ds/submit', {currentCode, stepIdx})
     .then((response) => {
       console.log(response.data);
       let result = response.data;
@@ -23,23 +23,13 @@ export default function CodeType({answer, setStepIdx, stepIdx}) {
       }
       if(passFlag) {
         setCurrentCode(resultStr);
-        setInterval(() => {setStepIdx(stepIdx + 1); setCurrentCode('')}, 5000)
-        // setStepIdx(stepIdx + 1);
+        setInterval(() => {setStepIdx(stepIdx + 1); setCurrentCode('');}, 5000)
       } else {
         setCurrentCode(resultStr);
       }
     })
     .catch(err => console.error(err))
 
-  }
-
-  const downloadTxtFile = () => {
-    const element = document.createElement("a");
-    const file = new Blob([document.getElementById('typeArea').value], {type: 'text/plain'});
-    element.href = URL.createObjectURL(file);
-    element.download = "userCode.js";
-    document.body.appendChild(element); // Required for this to work in FireFox
-    element.click();
   }
 
   const handleChange = (e) => {

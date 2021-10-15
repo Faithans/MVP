@@ -55,4 +55,6 @@ binarySearchTreeMethods.depthFirstLog = function (func) {
     this.right.depthFirstLog(func);
   }
 };
+
+
       module.exports=BinarySearchTree
